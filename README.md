@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 21.2.2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: Vishnupriya R
+###  ROLL NO : 212222110054
+###  DEPARTMENT: CSE-IoT
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -77,12 +77,45 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+```
+Name :  Vishnupriya R
+Reg no: 212222110054
 
 
+#include"stdio.h"
+#include"stdbool.h"
+bool IRSENSOR;
+void irpair();
+while(1)
+{
+irpair();
+}
+void irpair()
+{
+IRSENSOR=HAL_GPIO_ReadPin(GPIO,GPIO_PIN_4);
+if(IRSENSOR==0)
+{
 
+HAL_GPIO_WritePin(GPIO,GPIO_PIN_0,RESET);
+HAL_Delay(1000);
+HAL_GPIO_WritePin(GPIO,GPIO_PIN_0,SET);
+   
+                    HAL_Delay(1000);
+}
+else
+{
+HAL_GPIO_WritePin(GPIO, GPIO_PIN_0,RESET);
+
+                HAL_Delay(1000);
+}
+
+```
 ## Output  :
- 
- 
+ ### Without obstacle:
+ ![307334299-acef013d-d02f-4be1-b98f-1bdcc0544d68](https://github.com/vishnupriyaramesh17/EXPERIMENT--02-INTERFACEING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/119393589/0c6d6fec-24c2-4c05-8f93-417b01ce8d57)
+ ### Obsatcle detected:
+ ![307333859-6503e000-d40d-464a-9a26-ecad1c610fd2](https://github.com/vishnupriyaramesh17/EXPERIMENT--02-INTERFACEING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/119393589/38b6c5b0-1da5-4c90-af10-0c9b0925a31c)
+
  
  
 ## Result :
